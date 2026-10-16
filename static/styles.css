@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ESTILOS GERAIS */
+:root{
+    --C1:#f0f0f0;
+    /* --C1:#404040; */
+    --C2: #99DE0E;
+    /* --C2:#FF4B57; */
+    /* --C2: #0EACFF; */
+    /* --C2: #ac0e0e; */
+    /* --C2: #DEDE60; */
+    --C3:#23253A;
+    /* --C3:#F9F9F9; */
+    /* --C3:#000; */
+    --C4:#808080;
+    --C5:#202020;
+    /* --C5:#F0F0F0; */
+    /* --C5:#000000; */
+    /* --Alf1: rgba(255,255,255,.5); */
+    /* --Alf1: rgba(0,255,255,.5); */
+    --Alf1: rgba(50,255,50,.5);
+    --Alf2: rgba(0,0,0,.5);
+}
+
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: 10px;
+    scrollbar-color: var(--C2) var(--C3);
+}
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    outline: none;
+    color: var(--C1);
+    transition: all 0.25s;
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--C3);
+    height: 100dvh;
+}
+button{
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--C2);
+    cursor: pointer;
+    color: var(--C5);
+
+    &:hover{
+        box-shadow: 0 0 20px var(--Alf1);
+        transform: scale(1.1);
+    }
+}
+.flex{
+    display: flex;
+}
+.txt-col{
+    color: var(--C2);
+}
+
+/* HEADER */
+header .interface{
+    padding: 20px 4%;
+}
+
+header .flex{
+    align-items: center;
+    justify-content: space-between;
+}
+header .nevigation{
+    display: flex;
+    gap: 40px;
+    
+    & li a{
+        color: var(--C4);
+        text-decoration: none;
+
+        &:hover{
+            text-shadow: 0 0 20px var(--C2);
+            color: var(--C1);
+        }
+    }
+}
+header .contatos{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    & .redes{
+        display: flex;
+        font-size: 1.5rem;
+        gap: 20px;
+
+        & li a i{
+            color: var(--C1);
+        }
+
+        & li:hover{
+            text-shadow: 0 0 30px var(--Alf1);
+            transform: scale(1.5);
+        }
+    }
+
+}
+
+/* MAIN */
+/* SOBRE MIM */
+main .interface{
+    min-height: 600px;
+}
+main .sobre-mim .interface{
+    padding: 0px 4%;
+    margin: 20px 0px;
+}
+section h1{
+    color: var(--C4);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+main .sobre-mim .flex{
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+main .sobre-mim .flex .texto{
+    max-width: 550px;
+    
+    & p{
+        margin: 10px 0;
+        text-align: justify;
+    }
+}
+main .sobre-mim img{
+    background: no-repeat center/cover;
+    border-radius: 300px;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 20px var(--Alf2);
+    animation: flutuar 1s ease-in-out alternate infinite;
+}
+
+@keyframes flutuar {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+/* habilidades */
+main .habilidades .interface{
+    padding: 40px 4%;
+    margin: 80px 0px;
+}
+main .habilidades .flex{
+    justify-content: center;
+    gap: 40px;
+}
+main .habilidades .flex .box{
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--C5);
+    max-width: 350px;
+    height: fit-content;
+    
+    border: solid 1px var(--C2);
+    & h3{
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+
+        & i{
+            margin-right: 10px;
+            font-size: 32px;
+            color: var(--C2);
+        }
+    }
+    
+    & ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        
+        & li{
+            font-size: 1.1rem;
+            text-align: center;
+            flex-grow: 1;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background-color: var(--C3);
+            border: solid 1px var(--C2);
+        }
+    }
+}
+
+/* GRADUACAO */
+main .graduacao .interface{
+    padding: 20px 4%;
+    margin: 80px 0px;
+    background-image: linear-gradient(to bottom, var(--C3) 50%, var(--C1) 50%);
+}
+main .graduacao .flex{
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+main .graduacao .box{
+    background-color: var(--C1);
+    box-shadow: 0px 0px 20px var(--Alf2);
+    padding: 20px 30px;
+    max-width: 350px;
+    border-radius: 5px;
+    flex-grow: 1;
+
+    i{
+        color: var(--C3);
+        margin-right: 10px;
+        font-size: 44px;
+    }
+    & h3{
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--C3);
+    }
+    & .texto{
+        display: flex;
+        flex-direction: column;
+
+        & p{
+            margin: 5px 0px;
+            color: var(--C5);
+            text-align: justify;
+        }
+        & .cargahoraria{
+            display: flex;
+            flex-wrap: wrap;
+            
+            & h2{
+                text-align: center;
+                font-size: 14px;
+                font-weight: 900;
+                color: var(--C5);
+                flex-grow: 1;
+            }
+            & h3{
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* PROJETOS */
+main .projetos .interface{
+    padding: 20px 8%;
+    margin: 280px 0px;
+}
+main .projetos .interface h1{
+    text-align: center;
+}
+main .projetos .flex{
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main .projetos .box{
+    position: relative;
+    max-width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px var(--Alf2);
+    overflow: hidden;
+    
+    &:hover{
+        & > img{
+            opacity: 0.2;
+            animation: rolarFundo 4s alternate infinite ease-in-out; /* Tempo, velocidade e repetição */
+        }
+    }
+}
+main .projetos .box img{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+main .projetos .box .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 30px;
+    opacity: 1;
+    background-color: var(--C3);
+
+    & h3{
+        font-size: 28px;
+        font-weight: 500;
+        color: var(--C4);
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    & p{
+        text-align: justify;
+    }
+}
+
+/* FOOTER */
+footer .interface{
+    padding: 20px 8%;
+    background-color: var(--C5);
+}
+footer .flex{
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+footer .redes{
+    max-width: 33%;
+    
+    & h1{
+        font-size: 1.5rem;
+    }
+    & p{
+        margin: 20px 0;
+    }
+    & ul{
+        display: flex;
+        align-items: center;
+        & li{
+            &:hover{
+                scale: 1.1;
+            }
+        }
+        & i{
+            font-size: 34px;
+            margin-right: 20px;
+            color: var(--C2);
+
+            &:hover{
+                text-shadow: 0 0 30px var(--Alf1);
+            }
+        }
+    }
+}
+footer .box{
+    & h2{
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--C2);
+        margin-bottom: 10px;
+    }
+    & ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & li{
+            margin: 10px 0;
+        }
+        & a{
+            text-decoration: none;
+
+            &:hover{
+                color: var(--C4);
+            }
+        }
+    }
+}
+
+@keyframes rolarFundo {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 800px) {
+    /* GERAL */
+    .flex{
+        align-items: center;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    /* HEADER */
+    header h1{
+        align-self: flex-start;
+    }
+    header .flex ul,
+    header .flex button{
+        display: none;
+    }
+    
+    /* MAIN */
+    main .Lema{
+        display: none;
+    }
+    main .sobre-mim .interface{
+        padding: 40px 10%;
+
+        & img{
+            height: 200px;
+            width: 200px;
+        }
+    }
+    /* FOOTER */
+    footer .flex{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        & .redes{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 100%;
+            flex-grow: 1;
+        }
+
+        & .box{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+    }
+}
