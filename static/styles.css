@@ -136,6 +136,7 @@ main .sobre-mim .flex .texto{
     }
 }
 main .sobre-mim img{
+    order: 0;
     background: no-repeat center/cover;
     border-radius: 300px;
     width: 400px;
@@ -153,7 +154,7 @@ main .sobre-mim img{
     }
 }
 
-/* habilidades */
+/* HABILIDADES */
 main .habilidades .interface{
     padding: 40px 4%;
     margin: 80px 0px;
@@ -390,6 +391,129 @@ footer .box{
     }
 }
 
+/* NAV-BAR */
+/* Overlay de fundo */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px); /* Efeito de desfoque opcional */
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+.menu-lateral{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: -100%; /* Inicia escondido à esquerda */
+    height: 100vh;
+    z-index: 999;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    background-color: var(--C5);
+}
+.menu-lateral.menuAtivo{
+    left: 0;
+    /* transform: translateX(0px); */
+}
+
+
+.btn-acionar{
+    z-index: 1000;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    align-self: flex-start;
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.5rem;
+    border: solid 1px rgba(0,0,0, .18);
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #c0c0c0;
+    }
+}
+
+.menu-lateral ul{
+    display: flex;
+}
+.menu-lateral .lista-menus{
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    list-style-type: none;
+
+    & .item-menu{
+        font-size: 1.4rem;
+        & a{
+            padding: 2px 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: #808080;
+            border: solid 1px rgba(0,0,0, .18);
+            border-radius: 6px;
+            & .icon{
+                font-size: 2rem;
+            }
+            & .txt-link{
+                margin-left: 16px;
+                font-size: 1.2rem;
+            }
+
+            &:hover{
+            background-color: #c0c0c0;
+            }
+        }
+    }
+}
+
+.menu-lateral .lista-opcoes{
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 10px 0px;
+    gap: 10px;
+    
+    & .item-opcoes .opt{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-weight: 900;
+        border: solid 1px rgba(0,0,0, .18);
+        border-radius: 4px;
+        cursor: pointer;
+        
+        & .icon{
+            font-size: 1.2rem;
+            color: #000;
+        }
+        & .txt-button{
+            margin-left: 10px;
+            color: #202020;
+        }
+        &:hover{
+            background-color: var(--C2);
+        }
+    }
+}
+
 /* RESPONSIVIDADE */
 @media screen and (max-width: 800px) {
     /* GERAL */
@@ -397,6 +521,14 @@ footer .box{
         align-items: center;
         flex-direction: column;
         row-gap: 30px;
+    }
+    /* NAV-BAR */
+
+    .btn-acionar{
+        display: block;
+    }
+    .menu-lateral{
+        display: flex;
     }
 
     /* HEADER */
@@ -407,7 +539,6 @@ footer .box{
     header .flex button{
         display: none;
     }
-    
     /* MAIN */
     main .Lema{
         display: none;
