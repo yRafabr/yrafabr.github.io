@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,61 @@
 
     <link rel="stylesheet" href="./static/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <title>Portfolio</title>
-
+    <title>Rafael Fortes</title>
 </head>
 <body>
+    <nav class="menu-lateral menuInativo">
+        <ul class="lista-menus">
+            <li class="item-menu">
+                <a href="#sobre-mim">
+                    <span class="icon"><i class="bi bi-file-person"></i></span>
+                    <span class="txt-link">Sobre mim</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#habilidades">
+                    <span class="icon"><i class="bi bi-stars"></i></span>
+                    <span class="txt-link">Habilidades</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#graduacao">
+                    <span class="icon"><i class="bi bi-mortarboard"></i></span>
+                    <span class="txt-link">Formação</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#projetos">
+                    <span class="icon"><i class="bi bi-code-slash"></i></span>
+                    <span class="txt-link">Projetos</span>
+                </a>
+            </li>
+        </ul><!--Fim lista itens menu-->
+
+        <ul class="lista-opcoes">
+            <li class="item-opcoes">
+                <button type="button" class="opt">
+                    <span class="icon"><i class="bi bi-layout-text-sidebar-reverse"></i></span>
+                    <span class="txt-button">Baixar Currículo</span>
+                </button>
+            </li>
+            <li class="item-opcoes">
+                <button type="button" class="opt">
+                    <span class="icon"><i class="bi bi-chat-left-dots"></i></span>
+                    <span class="txt-button">Fale comigo</span>
+                </button>
+            </li>
+        </ul><!--Fim lista opcoes-->
+    </nav><!--Fim menu lateral-->
+
+    <!-- Fundo escurecido para quando o menu estiver aberto -->
+    <div class="overlay" id="overlay"></div>
+
+    <button class="btn-acionar" id="btn-acionar" aria-label="Abrir Menu">
+        <i class="bi bi-list icon-abrir"></i>
+        <i class="bi bi-x-lg icon-fechar" style="display: none;"></i>
+    </button>
+
     <header>
         <div class="interface">
             <div class="flex">
@@ -25,9 +76,9 @@
 
                 <div class="contatos">
                     <ul class="redes">
-                        <li><a href="#"><i class="bi bi-github"></i></a></li>
-                        <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
-                        <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                        <li><a href="https://github.com/yRafabr"><i class="bi bi-github"></i></a></li>
+                        <li><a href="+55 55 9247-8118"><i class="bi bi-whatsapp"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/rafael-fortes-50996235b/?isSelfProfile=true"><i class="bi bi-linkedin"></i></a></li>
                     </ul>
     
                     <button><a href="#"></a>Fale comigo</button>
@@ -187,9 +238,9 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repellat ipsum quas doloremque et officia hic minus pariatur a amet!</p>
 
                     <ul>
-                        <li><a href="#"><i class="bi bi-github"></i></a></li>
-                        <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
-                        <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                        <li><a href="https://github.com/yRafabr"><i class="bi bi-github"></i></a></li>
+                        <li><a href="+55 55 9247-8118"><i class="bi bi-whatsapp"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/rafael-fortes-50996235b/?isSelfProfile=true"><i class="bi bi-linkedin"></i></a></li>
                     </ul>
                 </div><!--Redes-->
 
@@ -217,5 +268,6 @@
         </div><!--Interface-->
     </footer><!-- FOOTER  -->
 
+    <script src="./static/script.js"></script>
 </body>
 </html>
